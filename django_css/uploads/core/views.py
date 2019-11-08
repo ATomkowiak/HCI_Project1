@@ -6,9 +6,9 @@ import csv
 import pandas as pd
 
 
-def home(request):
-    print('Home')
-    return render(request, 'home.html')
+def glowna(request):
+    print('Strona główna')
+    return render(request, 'glowna.html')
 
 
 def about(request):
