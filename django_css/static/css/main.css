@@ -1,9 +1,12 @@
 h1 {
-  color: #00ff00;
+  color: #55fa75;
 }
 
 body{
-  background-image: url("/static/img/bg.jpg");
+  font-family: "Lucida Console", Monaco, monospace;
+  /*background-image: url("/static/img/bg.jpg");*/
+  background-color: #0a0f22;
+  color: #eeeeff;
 }
 
 input[type=file], select {
@@ -18,7 +21,7 @@ input[type=file], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #002395;
+  background-color:#002395;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -37,8 +40,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f324;
+  border: 1px solid #55aaff;
 }
 
 nav ul li {
@@ -47,14 +49,62 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: #666;
+  color: #eeeeff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-nav ul li a:hover:not(.active) {
-  background-color: #ddd;
+nav ul li a:hover:not(.active), .dropdown:hover .dropbtn {
+  background-color: #55fa75;
+}
+
+
+/* The dropdown container */
+.dropdown {
+ float: left;
+ overflow: hidden;
+}
+
+/* dropdown button */
+.dropdown .dropbtn {
+ font-size: 16px;
+ border: none;
+ outline: none;
+ color: white;
+ padding: 14px 16px;
+ background-color: inherit;
+ font-family: inherit;
+}
+
+
+/*Zawartość dropdown*/
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #55fa75;
+ min-width: 160px;
+ z-index: 1;
+}
+
+/* Linki w dropdown*/
+.dropdown-content a {
+ float: none;
+ color: #eeeeff;
+ padding: 10px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
+}
+
+/*Podświetlenie linków w dropdown*/
+.dropdown-content a:hover {
+ background-color: #0a0f22;
+ color: #55fa75;
+}
+
+.dropdown:hover .dropdown-content {
+ display: block;
 }
 
 /* Tables */

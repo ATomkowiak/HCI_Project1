@@ -10,10 +10,28 @@
     <header>
       <nav>
           <ul>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'data_analysis' %}">Data analysis</a></li>
-              <li><a href="{% url 'about' %}">About</a></li>
-              <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'home' %}">Strona Główna</a></li>
+              <div class="dropdown">
+                <button class="dropbtn">Lekcje
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">1.Podstawy</a>
+                  <a href="#">2.Instrukcje warunkowe</a>
+                  <a href="#">3.Pętle</a>
+                  <a href="#">4.Liczby pseudolosowe</a>
+                  <a href="#">5.Listy</a>
+                  <a href="#">6.Słowniki</a>
+                  <a href="#">7.Łańcuchy znaków</a>
+                  <a href="#">8.Funkcje</a>
+                  <a href="#">9.Klasy</a>
+
+                </div>
+              </div>
+
+              <!-- <li><a href="{% url 'data_analysis' %}">Data analysis</a></li> -->
+              <li><a href="{% url 'about' %}">O Języku</a></li>
+              <li><a href="{% url 'contact' %}">Kontakt</a></li>
           </ul>
       </nav>
     </header>

@@ -20,7 +20,6 @@ def contact(request):
     print('Contact')
     return render(request, 'contact.html')
 
-
 def data_analysis(request):
     print('Data analysis')
     if request.method == 'POST' and request.FILES['myfile']:
