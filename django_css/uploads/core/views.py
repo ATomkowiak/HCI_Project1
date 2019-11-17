@@ -20,6 +20,42 @@ def contact(request):
     print('Contact')
     return render(request, 'contact.html')
 
+def podstawy(request):
+    print('Podstawy')
+    return render(request, 'lekcje/podstawy.html' , {'podstawy':podstawy})
+
+def ins_warun(request):
+    print('Instrukcje warunkowe')
+    return render(request, 'lekcje/ins_warun.html', {'ins_warun': ins_warun})
+
+def petle(request):
+    print('Pętle')
+    return render(request, 'lekcje/petle.html', {'petle':petle})
+
+def pseudolos(request):
+    print('Liczby pseudolosowe')
+    return render(request, 'lekcje/pseudolos.html', {'pseudolos':pseudolos})
+
+def listy(request):
+    print('Listy')
+    return render(request, 'lekcje/listy.html', {'listy':listy})
+
+def slowniki(request):
+    print('Listy')
+    return render(request, 'lekcje/slowniki.html', {'slowniki':slowniki})
+
+def lancuch(request):
+    print('Łańcuchy znaków')
+    return render(request, 'lekcje/lancuch.html', {'lancuch':lancuch})
+
+def funkcje(request):
+    print('Funkcje')
+    return render(request, 'lekcje/funkcje.html', {'funkcje':funkcje})
+
+def klasy(request):
+    print('Klasy')
+    return render(request, 'lekcje/klasy.html', {'klasy':klasy})
+
 def data_analysis(request):
     print('Data analysis')
     if request.method == 'POST' and request.FILES['myfile']:
