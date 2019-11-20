@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     <h1>Wstęp</h1>
-
+    <div class='sub'>
     <h3>Python</h3>
+    </div>
+    <div class='text'>
     <p>
       Python to obiektowy język programistyczny, który wyróżnia się dynamiką,
        łatwością w nauce i wielością możliwości wykorzystania.
@@ -28,7 +31,10 @@
        Taką opinię zawdzięcza swojej minimalistycznej i prostej składni, o czym
        niedługo się przekonamy.
     </p>
+    </div>
+    <div class='sub'>
     <h3>Instalacja</h3>
+    </div>
     <p>
         Możesz ściągnąć Pythona dla Windowsa ze strony https://www.python.org/downloads/windows/.
         Kliknij w link "Latest Python 3 Release - Python x.x.x". Jeżeli Twój komputer pracuje na
@@ -42,7 +48,7 @@
         jak pokazano tutaj (może to wyglądać trochę inaczej, jeśli instalujesz inną wersję).
     </p>
     <div class='zdj'>
-      <img class="zdj" src="{% static 'instalacja.png' %}" width="75%" height="75%">
+      <img class="zdj" src="{% static 'img/instalacja.png' %}" width="75%" height="75%">
     </div>
     <h3>Zaczynajmy!</h3>
     <p>
