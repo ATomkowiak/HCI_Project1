@@ -7,7 +7,6 @@ from uploads.core import views
 
 urlpatterns = [
     url('^$', views.glowna, name='home'),
-    url('data_analysis/', views.data_analysis, name='data_analysis'),
     url('about/', views.about, name='about'),
     url('contact/', views.contact, name='contact'),
     url('lekcje/podstawy/', views.podstawy, name='podstawy'),
@@ -19,7 +18,7 @@ urlpatterns = [
     url('lekcje/lancuchy_znakow/', views.lancuch, name='lancuch'),
     url('lekcje/funkcje/', views.funkcje, name='funkcje'),
     url('lekcje/klasy/', views.klasy, name='klasy'),
-
+    url('lekcje/sprawdzswojkod/', views.check, name='sprawdzswojkod')
 
 
 ]

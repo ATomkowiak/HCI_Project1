@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<div class='kot'>
+<form action="lekcje/sprawdzswojkod/" method="post">
+  {% csrf_token %}
+  {{ form.as_table }}
+  
+  <input type="submit" value="Submit">
+</form>
+</div>
+<p> Post Data: {{ info }} </p>
+<p> Result: {{ output }} </p>
+{% endblock %}

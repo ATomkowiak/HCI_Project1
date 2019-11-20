@@ -1,9 +1,9 @@
 from django import forms
 
-from uploads.core.models import Document
 
 
-class DocumentForm(forms.ModelForm):
-    class Meta:
-        model = Document
-        fields = ('description', 'document', )
+
+class sprawdz(forms.Form):
+  error_css_class = 'error' ##custom css for form errors - ".error";
+  required_css_class = 'required' ##custom css for required fields - ".required";
+  info_text = forms.CharField()

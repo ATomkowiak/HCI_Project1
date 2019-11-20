@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from scipy import stats
+from .forms import sprawdz
+
 
 import csv
 import pandas as pd
@@ -56,57 +58,26 @@ def klasy(request):
     print('Klasy')
     return render(request, 'lekcje/klasy.html', {'klasy':klasy})
 
-def data_analysis(request):
-    print('Data analysis')
-    if request.method == 'POST' and request.FILES['myfile']:
-        myfile = request.FILES['myfile']
+import subprocess
 
-        print('\nWhat is `myfile`?')
-        print(type(myfile))
+def check(request):
+  if request.method == 'GET':
+    form = sprawdz()
+  else:
+    form = sprawdz()
+    if form.is_valid():
+      info = request.POST['info_name']
+      output = script_function(info)
+      ## Here you are calling script_function,
+      ## passing the POST data for 'info' to it;
+      return render(request, 'lekcje/check.html', {
+        'info': info,
+        'output': output,
+      })
+  return render(request, 'lekcje/check.html', {
+    'form': form,
+  })
 
-        print('\nDirectly accessing `myfile` gives nothing :(')
-        print(type(str(myfile.read())))
-        print(str(myfile.read()))
-
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        print('\nHowever, when using FileSystemStorage...')
-        print('\nReading filename: %s' % filename)
-        print(type(fs.open(filename)))
-        print(fs.open(filename))
-
-        print('\nOpen and preview using pandas:')
-        df = pd.read_csv(fs.open(filename))
-        print(df)
-
-        print('\nOr with CSV module:')
-        with fs.open(filename, 'rt') as csvfile:
-            readCSV = csv.reader(csvfile, delimiter=',')
-            for row in readCSV:
-                print(row)
-
-        print('Data analysis')
-        r_table = df.apply(lambda x: df.apply(lambda y: r_xor_p(x, y,
-                                                                r_xor_p='r')))
-        p_table = df.apply(lambda x: df.apply(lambda y: r_xor_p(x, y,
-                                                                r_xor_p='p')))
-
-        return render(request, 'data_analysis.html',
-                      {'result_present': True,
-                       'results': {'r_table': r_table.to_html(),
-                                   'p_table': p_table.to_html()},
-                       'df': df.to_html()})
-
-    return render(request, 'data_analysis.html')
-
-
-def r_xor_p(x, y, r_xor_p='r'):
-    ''' Pearson's r or its p
-    Depending of what you would like to get.
-    '''
-    r, p = stats.pearsonr(x, y)
-
-    if r_xor_p == 'r':
-        return r
-    else:
-        return p
+def script_function( post_from_form ):
+  print (post_from_form) ##optional,check what the function received from the submit;
+  return subprocess.check_output(['/path/to/your/script.py', post_from_form])
