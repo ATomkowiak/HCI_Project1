@@ -2,9 +2,33 @@ h1 {
   color: #55fa75;
 }
 
+h3 {
+  color: #55aaff;
+}
+
+div.kod {
+  display: block;
+  margin: 0;
+  padding: 10px 10px;
+  background-color: inherit;
+  color: #ff00f0;
+  border: 2px solid #55aaff;
+  font-family: inherit;
+  font-size: 15;
+  font-weight: bold;
+}
+
+IMG.zdj{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body{
+  line-height: 1.25;
   font-family: "Lucida Console", Monaco, monospace;
-  /*background-image: url("/static/img/bg.jpg");*/
+  margin-left: 4cm;
+  margin-right: 4cm;
   background-color: #0a0f22;
   color: #eeeeff;
 }
@@ -40,7 +64,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #55aaff;
+  border: 2px solid #55aaff;
 }
 
 nav ul li {
