@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     <h1>Podstawy</h1>
+    <div class="sub">
+      <h3> Programowanie </h3>
+    </div>
+    <div class="text">
+      <p>Programowanie to proces tworzenia i utrzymywania kodu źródłowego, czyli zestawu instrukcji <br>
+      które komputer wykonuje w celu osiągniecia porządanego przez programistę efektu. <br>
+      Komunikacja między programistą, a komputerem odbywa się za pomocą języka programowania, <br>
+      czyli zbiór zasad określający, kiedy ciąg symboli wywołuje okreśłone działanie programu oraz jakie. <br>
+      </p>
+    </div>
+    <div class="sub">
+      <h3> Python</h3>
+    </div>
+    <div class="text">
+      <p> Python to język wysokiego poziomu, o bardzo szerokim i uniewersalnym wykorzystaniu. <br>
+        Ideą przewodnią Pythona jest klarowność i przejrzystość składni.<br>
+        W tym poradniku będziemy używać Python w wersji 3.X
+      </p>
+    </div>
+    <div class="sub">
+      <h3>Zwracanie tekstu lub zawartości zmiennej</h3>
+    </div>
+    <div class="kod">
+      <p> print("Cześć! To twój pierwszy program")</p>
+    </div>
+    <div class="text">
+      <p> Efekt wywołania tego kodu powinien wyglądać tak: </p>
+    </div>
+    <div class="zdj">
+      <img src="{% static 'img/1prog.png' %}" width="50%" height="100%">
+    </div>
+    <div class="text">
+      <p>print - jest funkcją zwracającą tekst<br>
 
-    <p>Programowanie to proces tworzenia i utrzymywania kodu źródłowego, czyli zestawu instrukcji <br>
-    które komputer wykonuje w celu osiągniecia porządanego przez programistę efektu. <br>
-     
-    </p>
+      </p>
+    </div>
 {% endblock %}
