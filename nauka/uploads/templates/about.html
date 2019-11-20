@@ -1,7 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Python</h1>
+    <h1>Wstęp</h1>
 
-    <p>Coś z wikipedii albo coś</p>
+    <h3>Python</h3>
+    <p>
+      Python to obiektowy język programistyczny, który wyróżnia się dynamiką,
+       łatwością w nauce i wielością możliwości wykorzystania.
+       Ideą przewodnią, która przyświecała jego twórcom, była chęć zapewnienia
+       czytelności kodu źródłowego. Właśnie dlatego składnia języka programowania
+       Python wyróżnia się klarownością i zwięzłością. Jego interpretery są dostępne
+       na wiele systemów operacyjnych. Python rozwijany jest na otwartej licencji
+       przez Python Software Foundation, która jest organizacją non-profit.
+       Standardowa implementacja języka to CPython (napisany w języku programowania C).
+    </p>
+    <p>
+       Z Pythona korzystają między innymi YouTube, Google (Google App engine, Google Wave),
+       NASA (aplikacje służące do zarządzania kontrolą startową wahadłowców), czy też Nokia.
+       Łączony jest również z innymi językami i technologiami.
+       Z jego pomocą można tworzyć zarówno serwisy internetowe, jak i aplikacje
+       komputerowe czy sieciowe, a nawet gry. Python pozwala na tworzenie dynamicznych
+       stron internetowych w prosty sposób.
+    </p>
+    <p>
+       Python jest językiem wysokopoziomowym, powstałym na początku lat 90.
+       Python jest uważany za język intuicyjny i łatwy w użyciu.
+       Taką opinię zawdzięcza swojej minimalistycznej i prostej składni, o czym
+       niedługo się przekonamy.
+    </p>
+    <h3>Instalacja</h3>
+    <p>
+        Możesz ściągnąć Pythona dla Windowsa ze strony https://www.python.org/downloads/windows/.
+        Kliknij w link "Latest Python 3 Release - Python x.x.x". Jeżeli Twój komputer pracuje na
+        64-bitowej wersji Windowsa, ściągnij Windows x86-64 executable installer.
+        W innym wypadku ściągnij Windows x86 executable installer. Po ściągnięciu
+        instalatora, powinieneś go uruchomić (klikając dwukrotnie w niego) i postępować według
+        wyświetlanych instrukcji.
+        Jedna rzecz, na którą trzeba uważać: podczas instalacji zauważysz okno zaznaczone
+        jako "Setup". Upewnij się, że zaznaczyłaś opcję "Add Python 3.6 to PATH" lub
+        ''Add Python to your environment variables" i kliknęłaś "Install Now",
+        jak pokazano tutaj (może to wyglądać trochę inaczej, jeśli instalujesz inną wersję).
+    </p>
+    <div class='zdj'>
+      <img class="zdj" src="{% static 'instalacja.png' %}" width="75%" height="75%">
+    </div>
+    <h3>Zaczynajmy!</h3>
+    <p>
+       Wybierz interesujący Cię temat z zakładki Lekcje
+       i możemy zaczynać!</p>
 {% endblock %}

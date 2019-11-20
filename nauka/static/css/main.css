@@ -6,6 +6,19 @@ h3 {
   color: #55aaff;
 }
 
+A:link {
+COLOR: #ffffff;
+TEXT-DECORATION: none;
+}
+A:visited {
+COLOR: #ffffff;
+TEXT-DECORATION: none;
+}
+A:hover {
+COLOR: #55aaff;
+TEXT-DECORATION: none;
+}
+
 div.kod {
   display: block;
   margin: 0;
@@ -20,6 +33,7 @@ div.kod {
 
 IMG.zdj{
   display: block;
+  margin-top: 1cm;
   margin-left: auto;
   margin-right: auto;
 }
@@ -29,6 +43,7 @@ body{
   font-family: "Lucida Console", Monaco, monospace;
   margin-left: 4cm;
   margin-right: 4cm;
+  margin-bottom: 6cm;
   background-color: #0a0f22;
   color: #eeeeff;
 }
@@ -60,6 +75,7 @@ input[type=submit]:hover {
 
 /* Menu */
 nav ul {
+  font-style: inherit;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -81,6 +97,7 @@ nav ul li a {
 
 nav ul li a:hover:not(.active), .dropdown:hover .dropbtn {
   background-color: #55fa75;
+  color: #eeeeff
 }
 
 
@@ -92,13 +109,13 @@ nav ul li a:hover:not(.active), .dropdown:hover .dropbtn {
 
 /* dropdown button */
 .dropdown .dropbtn {
- font-size: 16px;
+ font-size: inherit;
  border: none;
  outline: none;
- color: white;
- padding: 14px 16px;
+ color: inherit;
+ padding: 16px 14px;
  background-color: inherit;
- font-family: inherit;
+ font-family: "Lucida Console", Monaco, monospace;
 }
 
 
