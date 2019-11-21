@@ -2,6 +2,30 @@
 
 {% block content %}
     <h1>Instrukcje warunkowe</h1>
-
-    <p>tekst</p>
-{% endblock %}
+    <div class='sub'>
+      <h3> Czym są?</h3>
+      </div>
+    <div class='text'>
+    <p>Instrukcja warunkowa służy do sprawdzenia prawdziwości wyrażenia warunkowego.<br>
+       W zależności od tego czy wyrażenie warunkowe jest prawdziwe czy nie, wykonany zostanie inny fragment kodu.
+       Przykładowy program sprawdzający czy użytkownik jest pełnoletni.
+     </p>
+     </div>
+     <div class='kod'>
+      <p>print ( "Ile	masz  lat?" )<br>
+      wiek  =	int	( input ())<br>
+      if  wiek	>=	18: <br>
+        print (	" Brawo !" )<br>
+        print (	" Jesteś pełnoletni !" )<br>
+      else:<br>
+        print("Nie jesteś pełnoletni")</p>
+        </div>
+        <div class='text'>
+          <p>
+      W języku Python bardzo istotne są wcięcia. W powyższym przykładzie wszystko co poprzedzone jest wcięciem ”należy” do bloku instrukcji ”if”.<br>
+       Oznacza to, że wszystko co jest poprzedzone wcięciem zostanie wykonane jeśli warunek jest prawdziwy.<br>
+        Podobnie z instrukcją else, która zostanie wykoanan jeśli warunek przy if nie zostanie spełniony<br>
+        kolejną instrukcją jest elif (else if) która pozwala na stworzenie większej ilości sprawdzanych warunków. <br>
+       </p>
+       </div>
+      {% endblock %}
